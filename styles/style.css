@@ -1,11 +1,15 @@
 /* место для вашего кода */
 header {
-  min-height: 109px;
+  height: 109px;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin: 92px 50px;
+  margin: 92px 49px 92px 51px;
+}
+
+.header__menu {
+  margin-top: 2px;
 }
 
 .header__links-list {
@@ -14,7 +18,7 @@ header {
   list-style: circle;
 }
 
-.header__links-list-item{
+.header__links-list-item {
   font-size: 18px;
   font-weight: normal;
 }
@@ -34,20 +38,22 @@ header {
 }
 
 .header__logo {
+  display: block;
   position: absolute;
-  left: 45%;
-  top: 0;
+  left: 602px;
+  top: 1px;
 }
 
 .header__logo-image {
   display: block;
-  height: 105px;
-  width: 138px;
-  background-image: url(/images/logo-black.svg);
+  height: 106px;
+  width: 135px;
+  background-image: url(../images/logo-black.svg);
   background-repeat: no-repeat;
 }
 
 .header__address {
+  margin-right: 2px;
   font-size: 18px;
   line-height: calc(24.1/18);
 }
@@ -65,11 +71,11 @@ main {
 }
 
 .cover {
-  position: relative;  
+  position: relative;
   margin-left: -50px;
   margin-right: -50px;
   height: 757px;
-  background-image: url(/images/cover.jpg);
+  background-image: url(../images/cover.jpg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,15 +191,15 @@ main {
   justify-content: space-between;
 }
 .card_type_film {
-  background-image: url("/images/card-lot-01.jpg");
+  background-image: url("../images/card-lot-01.jpg");
 }
 
 .card_type_book {
-  background-image: url("/images/card-lot-02.jpg");
+  background-image: url("../images/card-lot-02.jpg");
 }
 
 .card_type_painting {
-  background-image: url("/images/card-lot-03.jpg");
+  background-image: url("../images/card-lot-03.jpg");
 }
 
 .card__title {
@@ -257,7 +263,7 @@ main {
 
 .about__logo-image {
   display: block;
-  background-image: url(/images/logo-white.svg);
+  background-image: url(../images/logo-white.svg);
   z-index: 1;
   width: 148px;
   height: 114px;
