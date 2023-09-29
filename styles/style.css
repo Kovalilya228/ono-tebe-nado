@@ -1,11 +1,10 @@
 /* место для вашего кода */
 header {
-  height: 109px;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: space-between;
-  margin: 92px 49px 92px 51px;
+  margin: 92px 50px 92px;
 }
 
 .header__menu {
@@ -38,56 +37,61 @@ header {
 }
 
 .header__logo {
-  display: block;
-  position: absolute;
-  left: 602px;
-  top: 1px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  
 }
 
 .header__logo-image {
   display: block;
   height: 106px;
   width: 135px;
-  background-image: url(../images/logo-black.svg);
   background-repeat: no-repeat;
 }
 
-.header__address {
-  margin-right: 2px;
+.address {
+  grid-column-start: -1;
+  margin-right: 3px;
   font-size: 18px;
   line-height: calc(24.1/18);
 }
 
-.header__address a {
+.address a {
+  display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid black;
+}
+
+.header__address {
+  max-width: 237px;
 }
 
 main {
   display: flex;
   flex-direction: column;
   gap: 180px;
+}
+
+main > :not(:first-child) {
   margin: 0 50px;
 }
 
 .cover {
   position: relative;
-  margin-left: -50px;
-  margin-right: -50px;
-  height: 757px;
+  padding-bottom: 50px;
   background-image: url(../images/cover.jpg);
-  background-position: right;
+  background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
 }
 
 .overlay {
+  top: 0;
+  left: 0;
   position: absolute;
   background-color: rgb(0 0 0 /.6);
   height: 100%;
   width: 100%;
-  z-index: 0;
 }
 
 .cover__title {
@@ -98,25 +102,28 @@ main {
   font-weight: bold;
   display: grid;
   grid-template-rows: repeat(3, auto);
-  min-height: 355px;
   width: calc(100% - 100px);
   letter-spacing: 30px;
   gap: 20px;
   line-height: 100%;
 }
 
-.title__left-top {
+.title__left {
+  z-index: 1;
   text-align: left;
   grid-row-start: 1;
   line-height: 115%;
 }
 .title__middle {
+  position: relative;
+  right: 29px;
+  z-index: 1;
   text-align: center;
-  margin-right: 60px;
   grid-row-start: 2;
 }
 
-.title__right-bottom {
+.title__right {
+  z-index: 1;
   text-align: right;
   grid-row-start: 3;
 }
@@ -136,6 +143,7 @@ main {
 }
 
 .cover__description-text {
+  z-index: 1;
   font-size: 22px;
   color: #fff;
   text-transform: uppercase;
@@ -143,14 +151,17 @@ main {
 }
 
 .bet-button {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
   background: transparent;
   font-size: 22px;
   color: #fff;
   font-family: Raleway, sans-serif;
   text-transform: uppercase;
   padding: 12px 32px;
+  top: -10px;
   margin-right: 50px;
-  margin-top: -12px;
   border: 1px solid #fff;
 }
 
@@ -183,6 +194,7 @@ main {
 }
 
 .card {
+  background-position: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -230,7 +242,7 @@ main {
 
 .lots__more {
   display: inline-block;
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-weight: normal;
   text-decoration: none;
   border-bottom: 1px solid #000;
@@ -280,7 +292,6 @@ main {
   font-size: 20px;
   display: block;
   font-weight: normal;
-  line-height: ;
 }
 
 .about__text:not(:last-child) {
@@ -294,14 +305,7 @@ main {
 }
 
 .footer__address {
-  font-size: 18px;
-  line-height: 24.3px;
-}
-
-.footer__address a {
-  text-decoration: none;
-  border-bottom: 1px solid black;
-  line-height: 24.3px;
+  max-width: 237px;
 }
 
 .footer__menu-list {
@@ -322,7 +326,7 @@ main {
 .footer__social-list {
   list-style: none;
   display: flex;
-  width: 240px;
+  gap: 48px;
   justify-content: space-between;
 }
 .footer__social-link {
